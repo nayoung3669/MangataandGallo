@@ -15,12 +15,6 @@ header > img {
   padding-bottom: 15px;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  padding-left: 0px;
-}
-
 nav {
   display: flex;
   flex-direction: row;
@@ -31,7 +25,14 @@ nav {
   margin-bottom: 20px;
 }
 
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding-left: 0px;
+}
+
 nav li {
+  position: relative;
   list-style: none;
   text-align: center;
   margin-left: 30px;
@@ -39,9 +40,18 @@ nav li {
   color: #1b1b1b;
   letter-spacing: 0.15em;
 }
-
-/* nav li:hover {
-} */
+nav li a::after {
+  content: "";
+  position: absolute;
+  background-color: #4b2c20;
+  height: 3px;
+  left: 0;
+  width: 0%;
+  bottom: -10px;
+}
+nav li a:hover::after {
+  width: 100%;
+}
 
 a:link {
   text-decoration: none;
@@ -51,7 +61,6 @@ a:link {
   position: absolute;
   right: 100px;
 }
-
 .toggle {
   display: none;
   position: absolute;
@@ -65,7 +74,6 @@ section {
   flex-direction: row;
   justify-content: center;
 }
-
 .mainImage {
   display: flex;
   flex-direction: row;
@@ -78,7 +86,6 @@ section {
   width: 350px;
   flex: 0 1 auto;
 }
-
 #mainText {
   width: 750px;
 }
@@ -89,7 +96,6 @@ section {
   margin-top: 80px;
   justify-content: space-around;
 }
-
 .articles article {
   display: flex;
   flex-direction: column;
@@ -99,14 +105,12 @@ section {
   margin-right: 20px;
   margin-bottom: 100px;
 }
-
 article > a {
   font-size: 1.4rem;
   padding: 8px;
   border: 2px solid #4b2c20;
   border-radius: 0.3em;
 }
-
 article > a:hover {
   border: 2px solid #4b2c20;
   border-radius: 0.3em;
@@ -116,12 +120,21 @@ article > a:hover {
 
 footer {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #d7ccc8;
+  height: 170px;
+  padding: 20px;
+}
+.footerLogo img {
+  height: 55px;
+  width: 500px;
+}
+.copyright {
+  text-align: end;
+  letter-spacing: 0.1rem;
 }
 
-footer div {
-  border: 1px solid #bdb9b7;
-  flex: 1;
-}
 @media screen and (max-width: 768px) {
   nav ul {
     display: none;
