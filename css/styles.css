@@ -1,0 +1,131 @@
+* {
+  font-family: "Advent Pro", sans-serif;
+  color: #1b1b1b;
+}
+body {
+  background-color: #efebe9;
+}
+
+header > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 130px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding-left: 0px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #a69b97;
+  margin-bottom: 20px;
+}
+
+nav li {
+  list-style: none;
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+nav li a {
+  color: #1b1b1b;
+  letter-spacing: 0.1em;
+}
+a:link {
+  text-decoration: none;
+}
+
+.search {
+  position: absolute;
+  right: 100px;
+}
+
+.toggle {
+  display: none;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.mainImage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0px 100px;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav li {
+    list-style: none;
+  }
+
+  .search {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+  .toggle {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+
+  .mainImage {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mainText {
+    display: none;
+  }
+}
+
+#mainImage {
+  height: 400px;
+  width: 350px;
+  flex: 0 1 auto;
+}
+
+#mainText {
+  width: 750px;
+}
+
+article {
+  flex: 1;
+  background-color: #d7ccc8;
+  text-align: center;
+  padding: 3px;
+  margin: 15px;
+}
+
+footer {
+  display: flex;
+}
+
+footer div {
+  border: 1px solid #bdb9b7;
+  flex: 1;
+}
