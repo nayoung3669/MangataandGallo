@@ -53,6 +53,10 @@ a:link {
 
 .toggle {
   display: none;
+  position: absolute;
+  left: 35px;
+  top: 30px;
+  font-size: 22px;
 }
 
 section {
@@ -70,26 +74,28 @@ section {
 
 @media screen and (max-width: 768px) {
   nav ul {
+    display: none;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     width: 100%;
   }
 
+  nav ul.active {
+    display: flex;
+  }
+
   nav li {
     list-style: none;
+    padding: 8px;
   }
-
   .search {
-    position: absolute;
-    right: 30px;
+    right: 35px;
     top: 30px;
+    font-size: 22px;
   }
-
   .toggle {
     display: block;
-    position: absolute;
-    left: 30px;
-    top: 30px;
   }
 
   .mainImage {
