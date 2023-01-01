@@ -105,6 +105,11 @@ section {
   margin-right: 20px;
   margin-bottom: 100px;
 }
+
+article > div {
+  padding: 0px 50px 20px 50px;
+}
+
 article > a {
   font-size: 1.4rem;
   padding: 8px;
